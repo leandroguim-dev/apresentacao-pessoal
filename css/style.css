@@ -1,0 +1,250 @@
+:root {
+  /* Destaque e Ações */
+  --primary: #69a6a1;          /* Verde-água / ciano acinzentado */
+  --primary-hover: #81beba;    /* Tom mais luminoso para foco e hover */
+
+  /* Estrutura e Superfícies Escuras */
+  --bg-body: #23262b;          /* Grafite profundo base */
+  --bg-card: #3c4248;          /* Superfície dos blocos */
+  --bg-input: #1b1e22;         /* Fundo dos campos com profundidade */
+  --border: #4b6b6b;           /* Bordas em petróleo sóbrio */
+
+  /* Tipografia */
+  --text-main: #e7f3f2;        
+  --text-muted: #b0c0bf;       
+
+  /* Feedback */
+  --success: #6ee7b7;          /* Verde menta suave */
+  --error: #fca5a5;            /* Vermelho pastel */
+}
+
+/* Reset Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-body);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header & Navegação Fixa */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-card);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Conteúdo Principal */
+.main-content {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+/* Seção Perfil */
+.profile-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 3px solid var(--primary);
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.profile-text p {
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+/* Grade de Hobbies */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.sub-card {
+  background-color: var(--bg-body);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.sub-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.sub-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Formulário de Contato */
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(105, 166, 161, 0.25);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6c7882;
+}
+
+.error-msg {
+  color: var(--error);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: #172120;             
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Mensagens de Feedback */
+.feedback {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.feedback.success {
+  background-color: rgba(35, 38, 43, 0.9);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background-color: var(--bg-card);
+}

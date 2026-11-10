@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de apresentação individual e portfólio">
+  <title>Apresentação Individual | Portfólio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho e Navegação Fixa -->
+  <header class="header">
+    <div class="container nav-container">
+      <span class="logo">Apresentação</span>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Quem Sou</a></li>
+          <li><a href="#interesses">Hobbies & Interesses</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+
+    <!-- Seção 1: Resumo / Quem é você -->
+    <section id="sobre" class="card">
+      <div class="profile-layout">
+        <img src="img/img_3.jpeg" alt="Foto de perfil" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
+        <div class="profile-text">
+          <h2>Quem Sou Eu</h2>
+          <p>
+            Olá! Sou um profissional focado em tecnologia e processos contínuos de aprendizagem. 
+            Gosto de resolver problemas práticos combinando organização metódica, raciocínio lógico 
+            e ferramentas modernas de desenvolvimento e dados.
+          </p>
+          <p>
+            Atualmente venho expandindo minhas competências técnicas em programação, análise estruturada 
+            e métodos ágeis, construindo uma base sólida para projetos de alto impacto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: Hobbies e Interesses -->
+    <section id="interesses" class="card">
+      <h2>Hobbies & Interesses</h2>
+      <div class="grid-cards">
+        <article class="sub-card">
+          <h3>Música & Instrumentos</h3>
+          <p>Apreciação musical focada em jazz e harmonia, além de tocar contrabaixo e violão.</p>
+        </article>
+        <article class="sub-card">
+          <h3>Tecnologia & Hardware</h3>
+          <p>Montagem e manutenção de computadores, testes em distribuições Linux, scripts de automação e segurança de redes.</p>
+        </article>
+        <article class="sub-card">
+          <h3>Melhoria Contínua & Prática</h3>
+          <p>Interesse contínuo em normas de qualidade, padronização, resolução de desafios de código e cultivo de plantas em pequenos espaços.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção 3: Formulário de Contato -->
+    <section id="contato" class="card">
+      <h2>Fale Comigo</h2>
+      <p class="subtitle">Envie uma mensagem ou proposta de conexão. O formulário simula o envio com validação direta em tela.</p>
+
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Nome Completo</label>
+          <input type="text" id="name" name="name" placeholder="Ex: Carlos Silva">
+          <small class="error-msg" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Ex: nome@dominio.com">
+          <small class="error-msg" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem..."></textarea>
+          <small class="error-msg" id="messageError"></small>
+        </div>
+
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+
+      <div id="feedbackMessage" class="feedback hidden"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 • Página de Apresentação Individual. Desenvolvido com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
